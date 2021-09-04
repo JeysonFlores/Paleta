@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   sodipodi:docname="color.svg"
+   sodipodi:docname="com.github.jeysonflores.lightning.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    id="svg5"
    version="1.1"
-   viewBox="0 0 128 128"
-   height="483.77954"
-   width="483.77954"
+   viewBox="0 0 33.866666 33.866666"
+   height="128"
+   width="128"
    inkscape:export-filename="/home/jeyson/Imágenes/color/color.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
@@ -27,11 +27,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     width="128mm"
+     width="128px"
      units="px"
-     inkscape:zoom="0.45254834"
-     inkscape:cx="109.38058"
-     inkscape:cy="215.4466"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="58.14296"
+     inkscape:cy="65.324513"
      inkscape:window-width="1366"
      inkscape:window-height="707"
      inkscape:window-x="0"
@@ -85,7 +85,7 @@
        inkscape:label="Sharpen"
        inkscape:menu="Image Effects"
        inkscape:menu-tooltip="Sharpen edges and boundaries within the object, force=0.15"
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        id="filter3286"
        x="0"
        y="0"
@@ -115,9 +115,9 @@
        xlink:href="#linearGradient6487"
        id="linearGradient6489"
        x1="5.2916622"
-       y1="64.807842"
+       y1="64.807838"
        x2="122.94564"
-       y2="64.807842"
+       y2="64.807838"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,0.99620577,0,1.4332869)" />
     <linearGradient
@@ -135,7 +135,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g8135">
+       id="g8135"
+       transform="matrix(0.254985,0,0,0.254985,0.66814748,0.50384886)">
       <rect
          style="opacity:0.222121;fill:url(#linearGradient6489);fill-opacity:1;stroke:none;stroke-width:3.01181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.976471;paint-order:fill markers stroke"
          id="rect51-1"
