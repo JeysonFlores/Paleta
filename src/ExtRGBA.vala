@@ -18,14 +18,12 @@ namespace Lightning {
         
         /* format like rgb(211, 32, 128) */
         public string to_css_rgb_string () {
-        
             string s = "rgb(%i, %i, %i)"
                 .printf((int) (this.red * 255),
                         (int) (this.green * 255),
                         (int) (this.blue * 255));
             return s;
         }
-
 
         /* format like rgba(211, 32, 128, 1) */
         public string to_css_rgba_string () {        
@@ -36,7 +34,6 @@ namespace Lightning {
             return s;
         }
         
-        
         /* format like Gdk.RGBA(211, 32, 128, 1) */
         public string to_gdk_rgba_string () {        
             string s = "Gdk.RGBA(%i, %i, %i, 1.0)"
@@ -46,8 +43,7 @@ namespace Lightning {
             return s;
         }
 
-
-        /* format like "Qt.rgba(211, 32, 128, 1.0) */
+        /* format like Qt.rgba(211, 32, 128, 1.0) */
         public string to_qml_qt_rgba_string () {        
             string s = "Qt.rgba(%i, %i, %i, 1.0)"
                 .printf((int) (this.red * 255),
@@ -55,6 +51,14 @@ namespace Lightning {
                         (int) (this.blue * 255));                
             return s;
         }       
-
+        
+        /*  format like new Color(211, 32, 128)  */
+        public string to_java_rgb_string () {
+            string s = "new Color(%i, %i, %i)"
+                .printf((int) (this.red * 255),
+                        (int) (this.green * 255),
+                        (int) (this.blue * 255));
+            return s; 
+        }
     }
 }
