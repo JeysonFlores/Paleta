@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema path="/com/github/jeysonflores/lightning/"
+    id="com.github.jeysonflores.lightning"
+    gettext-domain="com.github.jeysonflores.lightning">
+        <key name="window-x" type="i">
+            <default>-1</default>
+            <summary>Most recent x position of app window</summary>
+            <description>Most recent x position of app window</description>
+        </key>
+        <key name="window-y" type="i">
+            <default>-1</default>
+            <summary>Most recent y position of app window</summary>
+            <description>Most recent y position of app window</description>
+        </key>
+        <key name="color-format-index" type="i">
+	        <default>2</default>
+	        <summary>Most recent index of selected color format</summary>
+	        <description>Most recent index of selected color format</description>
+        </key>
+        <key name="color-history" type="as">
+	        <default>[]</default>
+	        <summary>Color History</summary>
+	        <description>Color History</description>
+        </key>
+        <key name="zoomlevel" type="i">
+            <default>3</default>
+            <summary>Most recent zoomlevel of the picker's magnifier.</summary>
+            <description>Most recent zoomlevel of the picker's magnifier.</description>
+        </key>
+    </schema>
+</schemalist>
