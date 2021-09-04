@@ -4,9 +4,9 @@ public class Lightning.Widgets.FormatStack : Gtk.Box {
     private Gtk.StackSwitcher stack_switcher;
     private Gtk.Stack stack;
     
-    public Lightning.Widgets.FormatStack(){
+    public FormatStack () {
         Object(
-            orientation = Gtk.Orientation.HORIZONTAL
+            orientation: Gtk.Orientation.HORIZONTAL
         );
     }
     

@@ -27,6 +27,7 @@ executable(
     'src/MainWindow.vala',
     'src/ExtRGBA.vala',
     'src/Widgets/Picker.vala',
+    'src/Widgets/FormatStack.vala',
     'src/Services/Settings.vala',
     c_args: c_args,
     dependencies: [

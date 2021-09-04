@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Lightning
 Comment=An intuitive Color Picker
-Comment[fr]=Un Sélecteur de Couleurs intuitifs
+Comment[es]=Selector de color enfocado a la productividad
 Exec=com.github.jeysonflores.lightning
 Icon=com.github.jeysonflores.lightning
 Keywords=colorpicker;color;picker;selector;pipette;
