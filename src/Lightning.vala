@@ -1,11 +1,11 @@
 
-namespace ColorPicker {
+namespace Lightning {
 
-    public ColorPicker.Services.Settings settings;
+    public Lightning.Services.Settings settings;
     
-    public class ColorPickerApp : Granite.Application {
+    public class Application : Granite.Application {
         
-        public ColorPickerApp () {
+        public Application () {
             Object (application_id: "com.github.jeysonflores.lightning",
             flags: ApplicationFlags.FLAGS_NONE);
         }
@@ -16,9 +16,9 @@ namespace ColorPicker {
                 return;
             }
             
-            settings = ColorPicker.Services.Settings.get_instance ();
+            settings = Lightning.Services.Settings.get_instance ();
             
-            var app_window = new ColorPickerWindow (this);
+            var app_window = new MainWindow (this);
             
             app_window.show_all ();
 
@@ -39,7 +39,7 @@ namespace ColorPicker {
                 
         public static int main (string[] args) {
             
-            var app = new ColorPickerApp ();
+            var app = new Application ();
             
             return app.run(args);   
         }

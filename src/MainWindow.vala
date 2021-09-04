@@ -1,14 +1,14 @@
 
-namespace ColorPicker {
+namespace Lightning {
     
-    public class ColorPickerWindow: Gtk.Dialog {
+    public class MainWindow: Gtk.Dialog {
             
         ExtRGBA ext_active_color = ExtRGBA ();
                 
-        public ColorPickerWindow (Gtk.Application application) {
+        public MainWindow (Gtk.Application application) {
             Object (application: application,
                 icon_name: "com.github.jeysonflores.lightning",
-                    title: _("Color Picker"),
+                    title: _("Lightning"),
                     width_request: 500
             );
         }        
@@ -37,7 +37,7 @@ namespace ColorPicker {
                 		    		    		    		        
     		// activate color picker    
             pick_color_button.clicked.connect (() => {
-                var mouse_position = new ColorPicker.Widgets.Picker ();
+                var mouse_position = new Lightning.Widgets.Picker ();
                 mouse_position.show_all ();
                 
                 mouse_position.moved.connect ((t, color) => {

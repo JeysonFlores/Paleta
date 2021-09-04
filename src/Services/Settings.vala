@@ -1,5 +1,5 @@
 
-namespace ColorPicker.Services {
+namespace Lightning.Services {
 
     public class Settings : Granite.Services.Settings {
     

@@ -1,4 +1,4 @@
-namespace ColorPicker {
+namespace Lightning {
 
     public struct ExtRGBA : Gdk.RGBA {
                                      

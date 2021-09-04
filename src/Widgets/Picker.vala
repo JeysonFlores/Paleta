@@ -1,5 +1,5 @@
 
-namespace ColorPicker.Widgets {
+namespace Lightning.Widgets {
 
     public class Picker : Granite.Widgets.CompositedWindow {
     
