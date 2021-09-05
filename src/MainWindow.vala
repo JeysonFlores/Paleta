@@ -28,10 +28,10 @@ public class Lightning.MainWindow: Hdy.Window {
 
 
         var icon_mode = new Granite.Widgets.ModeButton ();
-        icon_mode.append_icon ("view-grid-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("preferences-color-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("tag-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("preferences-system-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("ionicons-eyedrop-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("ionicons-contrast-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("ionicons-albums-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("ionicons-options-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.set_active (0);
         icon_mode.can_focus = false;
         icon_mode.get_style_context ().remove_class("linked");

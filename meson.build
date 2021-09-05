@@ -35,6 +35,7 @@ executable(
     'src/Widgets/Picker.vala',
     'src/Widgets/FormatStack.vala',
     'src/Services/Settings.vala',
+    'src/Views/ColorPickerView.vala',
     asresources,
     c_args: c_args,
     dependencies: [
