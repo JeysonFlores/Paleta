@@ -22,7 +22,8 @@ public class Lightning.MainWindow: Hdy.Window {
             can_swipe_back = true,
             can_swipe_forward = true,
             vhomogeneous = true,
-            hhomogeneous = true
+            hhomogeneous = true,
+            expand = true
         };
 
 
@@ -104,6 +105,20 @@ public class Lightning.MainWindow: Hdy.Window {
             }
         });
 
+        icon_mode.mode_changed.connect ((widget) => {
+            if(icon_mode.selected == 0)
+                deck.visible_child = label1;
+
+            if(icon_mode.selected == 1)
+                deck.visible_child = label2;
+
+            if(icon_mode.selected == 2)
+                deck.visible_child = label3;
+
+            if(icon_mode.selected == 3)
+                deck.visible_child = label4;
+        });
+
         //var format_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);          
         //format_box.pack_start (pick_color_button);
         //format_box.pack_start(deck);
@@ -148,9 +163,24 @@ public class Lightning.MainWindow: Hdy.Window {
             pick_color_button.clicked ();
         });
                                 
-        
+        resize(350, 500);
     }
     
+    /*public void swipe_navigation() {
+        if (!deck.transition_running) {
+            if(deck.visible_child == label1)
+                icon_mode.set_active (0);
+
+            if(deck.visible_child == label2)
+                icon_mode.set_active (1);
+
+            if(deck.visible_child == label3)
+                icon_mode.set_active (2);
+
+            if(deck.visible_child == label4)
+                icon_mode.set_active (3);
+        }
+    } */
     
     public override bool delete_event (Gdk.EventAny event) {   
         // save window position             
