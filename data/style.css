@@ -1,0 +1,16 @@
+.toggle:checked {
+	border-color: @theme_selected_bg_color;
+	background: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+}
+
+.toggle {
+	border-color: @theme_selected_bg_color;
+	margin-left: 3px;
+	border: 0px;
+}
+
+.toggle:hover{
+	color: @theme_selected_fg_color;
+	border-color: @theme_selected_bg_color;
+}
