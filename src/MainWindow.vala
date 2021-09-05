@@ -28,8 +28,9 @@ public class Lightning.MainWindow: Hdy.Window {
 
         var icon_mode = new Granite.Widgets.ModeButton ();
         icon_mode.append_icon ("view-grid-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("view-list-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("view-column-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("preferences-color-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("tag-symbolic", Gtk.IconSize.BUTTON);
+        icon_mode.append_icon ("preferences-system-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.set_active (0);
         icon_mode.can_focus = false;
         icon_mode.get_style_context ().remove_class("linked");
@@ -62,14 +63,45 @@ public class Lightning.MainWindow: Hdy.Window {
 
         var label1 = new Gtk.Label ("Hola 1");
         var label2 = new Gtk.Label ("Hola 2");
-        
+        var label3 = new Gtk.Label ("Hola 3");
+        var label4 = new Gtk.Label ("Hola 4");
+
         deck.add (label1);
         deck.add (label2);
+        deck.add (label3);
+        deck.add (label4);
         deck.visible_child = label1;
 
-        deck.child_switched.connect((index, duration) => {
-            stdout.printf("Se cambió");
-            //icon_mode.set_active ((int) index);
+        deck.notify["visible-child"].connect (() => {
+            if (!deck.transition_running) {
+                if(deck.visible_child == label1)
+                    icon_mode.set_active (0);
+
+                if(deck.visible_child == label2)
+                    icon_mode.set_active (1);
+
+                if(deck.visible_child == label3)
+                    icon_mode.set_active (2);
+
+                if(deck.visible_child == label4)
+                    icon_mode.set_active (3);
+            }
+        });
+
+        deck.notify["transition-running"].connect (() => {
+            if (!deck.transition_running) {
+                if(deck.visible_child == label1)
+                    icon_mode.set_active (0);
+
+                if(deck.visible_child == label2)
+                    icon_mode.set_active (1);
+
+                if(deck.visible_child == label3)
+                    icon_mode.set_active (2);
+
+                if(deck.visible_child == label4)
+                    icon_mode.set_active (3);
+            }
         });
 
         //var format_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);          
