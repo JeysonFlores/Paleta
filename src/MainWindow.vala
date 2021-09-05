@@ -11,6 +11,13 @@ public class Lightning.MainWindow: Hdy.Window {
 
         Hdy.init ();
 
+        var css_provider = new Gtk.CssProvider ();
+        css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
+
+        Gtk.StyleContext.add_provider_for_screen (
+            Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        );
+
         deck = new Hdy.Deck () {
             can_swipe_back = true,
             can_swipe_forward = true,
@@ -25,6 +32,7 @@ public class Lightning.MainWindow: Hdy.Window {
         icon_mode.append_icon ("view-column-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.set_active (0);
         icon_mode.can_focus = false;
+        icon_mode.get_style_context ().remove_class("linked");
 
         var header = new Hdy.HeaderBar ();
         header.decoration_layout = "close:";
@@ -64,13 +72,13 @@ public class Lightning.MainWindow: Hdy.Window {
             //icon_mode.set_active ((int) index);
         });
 
-        var format_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);          
+        //var format_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);          
         //format_box.pack_start (pick_color_button);
-        format_box.pack_start(deck);
-        format_box.homogeneous = true;
+        //format_box.pack_start(deck);
+        //format_box.homogeneous = true;
         
         grid.add (header);
-        grid.add (format_box);
+        grid.add (deck);
 
         add (grid);  
                                                                 

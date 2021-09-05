@@ -3,8 +3,14 @@ project('com.github.jeysonflores.lightning', ['vala', 'c'],
     license: 'GPL-3.0'
 )
 
-gnome = import('gnome')
 i18n = import('i18n')
+
+gnome = import('gnome')
+asresources = gnome.compile_resources(
+    'as-resources', 'data/assets.gresource.xml',
+    source_dir: 'data',
+    c_name: 'as'
+)
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
@@ -29,6 +35,7 @@ executable(
     'src/Widgets/Picker.vala',
     'src/Widgets/FormatStack.vala',
     'src/Services/Settings.vala',
+    asresources,
     c_args: c_args,
     dependencies: [
         dependency('glib-2.0'),
