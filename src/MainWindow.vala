@@ -29,9 +29,13 @@ public class Lightning.MainWindow: Hdy.Window {
 
         var icon_mode = new Granite.Widgets.ModeButton ();
         icon_mode.append_icon ("ionicons-eyedrop-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("feathericons-hash-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.append_icon ("ionicons-contrast-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("ionicons-color-filter-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.append_icon ("ionicons-albums-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("ionicons-cube-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.append_icon ("ionicons-options-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("java-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.set_active (0);
         icon_mode.can_focus = false;
         icon_mode.get_style_context ().remove_class("linked");
@@ -67,11 +71,20 @@ public class Lightning.MainWindow: Hdy.Window {
         var label3 = new Gtk.Label ("Hola 3");
         var label4 = new Gtk.Label ("Hola 4");
 
-        deck.add (label1);
+        ext_active_color.parse ("#FFFF00");
+                                    
+        /*var as = ExtRGBA ();
+        as.parse ("#00FF00");
+        var color_area = new Gtk.Label ("");
+        color_area.override_background_color(Gtk.StateFlags.NORMAL, as);*/
+
+        var color_area = new Lightning.Widgets.FormatStack ();
+
+        deck.add (color_area);
         deck.add (label2);
         deck.add (label3);
         deck.add (label4);
-        deck.visible_child = label1;
+        deck.visible_child = color_area;
 
         deck.notify["visible-child"].connect (() => {
             if (!deck.transition_running) {

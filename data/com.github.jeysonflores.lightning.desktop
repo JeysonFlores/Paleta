@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Lightning
-Comment=An intuitive Color Picker
+Comment=Productiviy-based color picker
 Comment[es]=Selector de color enfocado a la productividad
 Exec=com.github.jeysonflores.lightning
 Icon=com.github.jeysonflores.lightning

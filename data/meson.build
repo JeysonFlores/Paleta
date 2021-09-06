@@ -1,5 +1,7 @@
 icon_sizes = ['32', '48', '64', '128']
-symbolic_icons = ['ionicons-contrast', 'ionicons-eyedrop', 'ionicons-albums', 'feathericons-sliders']
+symbolic_icons = ['ionicons-contrast', 'ionicons-eyedrop', 'ionicons-albums', 
+                'feathericons-sliders', 'java', 'ionicons-cube', 'ionicons-color-filter',
+                'feathericons-hash']
 
 foreach i : icon_sizes
     install_data(
