@@ -61,12 +61,21 @@ public class Lightning.MainWindow: Hdy.Window {
             move (window_x, window_y);
         }
 
-        var label2 = new Gtk.Label ("Contrast Content");
+        var label2 = new Gtk.Button.with_label ("Contrast Content");
         var label3 = new Gtk.Label ("Collections Content");
         var label4 = new Gtk.Label ("Settings Content");
 
         ext_active_color.parse ("#FFFF00");
                                     
+        label2.clicked.connect (() => {
+            int width, height, x, y;
+
+		    get_size (out width, out height);
+
+            print(width.to_string());
+            print("\n");
+            print(height.to_string());
+        });
         /*var as = ExtRGBA ();
         as.parse ("#00FF00");
         var color_area = new Gtk.Label ("");
@@ -170,7 +179,7 @@ public class Lightning.MainWindow: Hdy.Window {
             pick_color_button.clicked ();
         });
                                 
-        resize(350, 500);
+        resize(312, 460);
     }
     
     /*public void swipe_navigation() {

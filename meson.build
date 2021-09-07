@@ -34,6 +34,7 @@ executable(
     'src/ExtRGBA.vala',
     'src/Widgets/Picker.vala',
     'src/Widgets/FormatStack.vala',
+    'src/Widgets/ColorButton.vala',
     'src/Services/Settings.vala',
     'src/Views/ColorPickerView.vala',
     asresources,
