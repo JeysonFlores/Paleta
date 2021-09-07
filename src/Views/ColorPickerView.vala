@@ -7,7 +7,7 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
 
     public ColorPickerView () {
         Object(
-            orientation: Gtk.Orientation.HORIZONTAL
+            orientation: Gtk.Orientation.VERTICAL
         );
     }
     
@@ -21,6 +21,11 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
             can_focus = false
         };
 
+        var format_stack = new Lightning.Widgets.FormatStack ();
+
+        pack_start (color_picked_label, false, false, 0);
+        pack_start (color_picker_button, false, false, 0);
+        pack_start (format_stack, false, false, 0);
 
 
     }

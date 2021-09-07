@@ -1,16 +1,53 @@
 .toggle:dir(ltr){
-	color: black;
+	color: #595959;
 }
 
 .toggle:checked {
-	border-color: @theme_selected_bg_color;
-	background: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
+	border-color: #E5E5E5;
+	background: #E5E5E5;
+	color: black;
 }
 
 .toggle {
-	border-color: @theme_selected_bg_color;
 	margin-left: 3px;
 	border: 0px;
+	color: #595959;
 }
 
+.background-mode {
+	background: white;
+}
+
+.formatbox-content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.formatbox-copybutton {
+	color: #595959;
+}
+
+.formatbox-copybutton:active {
+	background: white;
+	color: black;
+}
+
+.formatbox {
+	background: #fcfcfc;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	border: 0px;
+	border-color: white;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.formatbox-nav {
+	padding-top: 10px;
+}
+
+.formatbox-stack {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

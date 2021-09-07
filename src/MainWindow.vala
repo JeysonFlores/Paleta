@@ -18,6 +18,8 @@ public class Lightning.MainWindow: Hdy.Window {
             Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         );
 
+        get_style_context ().add_class("background-mode");
+
         deck = new Hdy.Deck () {
             can_swipe_back = true,
             can_swipe_forward = true,
@@ -78,7 +80,7 @@ public class Lightning.MainWindow: Hdy.Window {
         var color_area = new Gtk.Label ("");
         color_area.override_background_color(Gtk.StateFlags.NORMAL, as);*/
 
-        var color_area = new Lightning.Widgets.FormatStack ();
+        var color_area = new Lightning.Views.ColorPickerView ();
 
         deck.add (color_area);
         deck.add (label2);
