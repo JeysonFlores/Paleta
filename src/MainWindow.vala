@@ -4,7 +4,12 @@ public class Lightning.MainWindow: Hdy.Window {
     private Hdy.Deck deck;
             
     public MainWindow (Gtk.Application application) {
-        Object (application: application);
+        Object (
+            application: application,
+            height_request: 560,
+            width_request: 312,
+            resizable: false
+        );
     }        
     
     construct {
@@ -172,14 +177,7 @@ public class Lightning.MainWindow: Hdy.Window {
                 this.present ();                    
             });
         });
-        
-        
-        // trigger picker on startup
-        this.show.connect(() => {            
-            pick_color_button.clicked ();
-        });
-                                
-        resize(312, 460);
+                          
     }
     
     /*public void swipe_navigation() {
