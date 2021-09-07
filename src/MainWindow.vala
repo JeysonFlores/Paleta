@@ -68,10 +68,9 @@ public class Lightning.MainWindow: Hdy.Window {
             move (window_x, window_y);
         }
 
-        var label1 = new Gtk.Label ("Hola 1");
-        var label2 = new Gtk.Label ("Hola 2");
-        var label3 = new Gtk.Label ("Hola 3");
-        var label4 = new Gtk.Label ("Hola 4");
+        var label2 = new Gtk.Label ("Contrast Content");
+        var label3 = new Gtk.Label ("Collections Content");
+        var label4 = new Gtk.Label ("Settings Content");
 
         ext_active_color.parse ("#FFFF00");
                                     
@@ -80,17 +79,17 @@ public class Lightning.MainWindow: Hdy.Window {
         var color_area = new Gtk.Label ("");
         color_area.override_background_color(Gtk.StateFlags.NORMAL, as);*/
 
-        var color_area = new Lightning.Views.ColorPickerView ();
+        var color_picker_view = new Lightning.Views.ColorPickerView ();
 
-        deck.add (color_area);
+        deck.add (color_picker_view);
         deck.add (label2);
         deck.add (label3);
         deck.add (label4);
-        deck.visible_child = color_area;
+        deck.visible_child = color_picker_view;
 
         deck.notify["visible-child"].connect (() => {
             if (!deck.transition_running) {
-                if(deck.visible_child == label1)
+                if(deck.visible_child == color_picker_view)
                     icon_mode.set_active (0);
 
                 if(deck.visible_child == label2)
@@ -106,7 +105,7 @@ public class Lightning.MainWindow: Hdy.Window {
 
         deck.notify["transition-running"].connect (() => {
             if (!deck.transition_running) {
-                if(deck.visible_child == label1)
+                if(deck.visible_child == color_picker_view)
                     icon_mode.set_active (0);
 
                 if(deck.visible_child == label2)
@@ -122,7 +121,7 @@ public class Lightning.MainWindow: Hdy.Window {
 
         icon_mode.mode_changed.connect ((widget) => {
             if(icon_mode.selected == 0)
-                deck.visible_child = label1;
+                deck.visible_child = color_picker_view;
 
             if(icon_mode.selected == 1)
                 deck.visible_child = label2;

@@ -28,17 +28,17 @@
 }
 
 .formatbox-copybutton:active {
-	background: white;
+	background: #f8f8f8;
 	color: black;
 }
 
 .formatbox {
-	background: #fcfcfc;
+	background: #f8f8f8;
 	padding-left: 20px;
 	padding-right: 20px;
 	border-radius: 10px;
 	border: 0px;
-	border-color: white;
+	border-color: #f8f8f8;
 	margin-left: 20px;
 	margin-right: 20px;
 }
@@ -50,4 +50,25 @@
 .formatbox-stack {
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.formatbox-label {
+	font-weight: 600;
+	font-family: monospace;
+}
+
+.color-picker-button {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.color-picked {
+	padding-bottom: 80px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	box-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.12);
 }
