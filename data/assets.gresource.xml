@@ -3,4 +3,7 @@
 	<gresource prefix="/com/github/jeysonflores/lightning">
 		<file alias="style.css" compressed="true">style.css</file>
 	</gresource>
+	<gresource prefix="/com/github/jeysonflores/lightning">
+		<file alias="style-dark.css" compressed="true">style-dark.css</file>
+	</gresource>
 </gresources>

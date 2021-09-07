@@ -11,13 +11,6 @@ public class Lightning.MainWindow: Hdy.Window {
 
         Hdy.init ();
 
-        var css_provider = new Gtk.CssProvider ();
-        css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
-
-        Gtk.StyleContext.add_provider_for_screen (
-            Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-        );
-
         get_style_context ().add_class("background-mode");
 
         deck = new Hdy.Deck () {

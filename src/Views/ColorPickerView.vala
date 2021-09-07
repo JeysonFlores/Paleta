@@ -24,6 +24,7 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
 
         current_color = ExtRGBA ();
         current_color.parse ("#edb2f7");
+        print (current_color.to_java_rgb_string ());
 
         color_picked_label = new Gtk.Label ("") {
             can_focus = false

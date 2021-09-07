@@ -33,6 +33,39 @@ namespace Lightning {
                     app_window.destroy ();
                 }
             });
+
+            var granite_settings = Granite.Settings.get_default ();
+            var gtk_settings = Gtk.Settings.get_default ();
+
+            var css_provider = new Gtk.CssProvider ();
+
+            if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK)
+                css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style-dark.css");
+            else
+                css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
+
+            Gtk.StyleContext.add_provider_for_screen (
+                Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+
+            gtk_settings.gtk_application_prefer_dark_theme = (
+                granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
+            );
+
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+                gtk_settings.gtk_application_prefer_dark_theme = (
+                    granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK
+                );
+
+                if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK)
+                    css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style-dark.css");
+                else
+                    css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
+
+                Gtk.StyleContext.add_provider_for_screen (
+                    Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                );
+            });
         }
         
         

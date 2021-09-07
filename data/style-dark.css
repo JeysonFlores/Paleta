@@ -1,0 +1,77 @@
+.toggle:dir(ltr){
+	color: #d3d3d3;
+    background: #333333;
+}
+
+.toggle:checked {
+	border-color: #2d2d2d;
+	background: #2d2d2d;
+	color: rgb(255, 255, 255);
+}
+
+.toggle {
+	margin-left: 3px;
+	border: 0px;
+	color: #d3d3d3;
+    background: #333333;
+}
+
+.background-mode {
+	background: #333333;
+}
+
+.formatbox-content {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.formatbox-copybutton {
+	color: rgb(61, 61, 61);
+}
+
+.formatbox-copybutton:active {
+	background: #2d2d2d;
+	color: white;
+}
+
+.formatbox {
+	background: #2d2d2d;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 10px;
+	border: 0px;
+	border-color: #2d2d2d;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.formatbox-nav {
+	padding-top: 10px;
+}
+
+.formatbox-stack {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.formatbox-label {
+	font-weight: 600;
+	font-family: monospace;
+}
+
+.color-picker-button {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 100px;
+	margin-right: 100px;
+    background: #333333;
+}
+
+.color-picked {
+	padding-bottom: 80px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 5px;
+	box-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.12);
+}

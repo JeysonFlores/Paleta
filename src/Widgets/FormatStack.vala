@@ -90,4 +90,8 @@ public class Lightning.Widgets.FormatStack : Gtk.Box {
         if(navigation.selected == 5)
             stack.visible_child_name = "Flutter";
     }
+
+    public void update_color () {
+        
+    }
 }
