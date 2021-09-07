@@ -37,7 +37,7 @@ public class Lightning.Widgets.FormatStack : Gtk.Box {
         var gdk_label = new Gtk.Label ("Gdk.RGBA(211, 32, 128, 1)");
         var java_label = new Gtk.Label ("new Color(211, 32, 128)");
         var android_label = new Gtk.Label ("Color.rgb(211, 32, 128)");
-        var flutter_label = new Gtk.Label ("Color (0xffffffff)");
+        var flutter_label = new Gtk.Label ("Color(0xffffffff)");
 
         hex_label.get_style_context ().add_class ("formatbox-label");
         rgb_label.get_style_context ().add_class ("formatbox-label");
@@ -92,6 +92,6 @@ public class Lightning.Widgets.FormatStack : Gtk.Box {
     }
 
     public void update_color () {
-        
+
     }
 }

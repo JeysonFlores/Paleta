@@ -60,5 +60,23 @@ namespace Lightning {
                         (int) (this.blue * 255));
             return s; 
         }
+
+        /*  format like Color.rgb(211, 32, 128)   */
+        public string to_android_rgba_string () {
+            string s = "Color.rgb(%i, %i, %i)"
+                .printf((int) (this.red * 255),
+                        (int) (this.green * 255),
+                        (int) (this.blue * 255));
+            return s; 
+        }
+
+        /*  format like Color(0xfffffffff)   */
+        public string to_flutter_hex_string () {
+            string s = "Color(0x%02x%02x%02xff)"
+                .printf((uint) (this.red * 255),
+                        (uint) (this.green * 255),
+                        (uint) (this.blue * 255));
+            return s;
+        }
     }
 }
