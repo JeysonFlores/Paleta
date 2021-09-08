@@ -23,7 +23,8 @@ public class Lightning.MainWindow: Hdy.Window {
             can_swipe_forward = true,
             vhomogeneous = true,
             hhomogeneous = true,
-            expand = true
+            expand = true,
+            transition_type = Hdy.DeckTransitionType.SLIDE
         };
 
 

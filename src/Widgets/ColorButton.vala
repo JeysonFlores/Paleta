@@ -15,6 +15,7 @@ class Lightning.Widgets.ColorButton : Gtk.Button {
 
     construct {
         get_style_context ().remove_class ("text-button");
+        get_style_context ().add_class ("flat");
         get_style_context ().add_class ("color-button");
     }
 
