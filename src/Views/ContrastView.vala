@@ -1,0 +1,3 @@
+class Lightning.Views.ContrastView {
+    
+}
