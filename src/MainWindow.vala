@@ -1,4 +1,4 @@
-public class Lightning.MainWindow: Hdy.Window {
+public class Paleta.MainWindow: Hdy.Window {
         
     ExtRGBA ext_active_color = ExtRGBA ();
     private Hdy.Deck deck;
@@ -87,7 +87,7 @@ public class Lightning.MainWindow: Hdy.Window {
         var color_area = new Gtk.Label ("");
         color_area.override_background_color(Gtk.StateFlags.NORMAL, as);*/
 
-        var color_picker_view = new Lightning.Views.ColorPickerView ();
+        var color_picker_view = new Paleta.Views.ColorPickerView ();
 
         deck.add (color_picker_view);
         deck.add (label2);
@@ -153,7 +153,7 @@ public class Lightning.MainWindow: Hdy.Window {
                                                                 
         // activate color picker    
         pick_color_button.clicked.connect (() => {
-            var mouse_position = new Lightning.Widgets.Picker ();
+            var mouse_position = new Paleta.Widgets.Picker ();
             mouse_position.show_all ();
             
             mouse_position.moved.connect ((t, color) => {

@@ -1,8 +1,8 @@
-public class Lightning.Views.ColorPickerView : Gtk.Box {
+public class Paleta.Views.ColorPickerView : Gtk.Box {
 
     public Gtk.Label color_picked_label;
     public Gtk.Button color_picker_button;
-    public Lightning.ExtRGBA current_color;
+    public Paleta.ExtRGBA current_color;
 
 
     public ColorPickerView () {
@@ -34,7 +34,7 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
 
         color_picked_label.get_style_context ().add_class ("color-picked");
 
-        var format_stack = new Lightning.Widgets.FormatStack ();
+        var format_stack = new Paleta.Widgets.FormatStack ();
 
 
         var recent_colors_stack = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
@@ -43,17 +43,17 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
         recent_colors.halign = Gtk.Align.START;
         recent_colors.get_style_context ().add_class ("h4");
 
-        var color1 = new Lightning.Widgets.ColorButton (current_color);
+        var color1 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color2 = new Lightning.Widgets.ColorButton (current_color);
+        var color2 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color3 = new Lightning.Widgets.ColorButton (current_color);
+        var color3 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color4 = new Lightning.Widgets.ColorButton (current_color);
+        var color4 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color5 = new Lightning.Widgets.ColorButton (current_color);
+        var color5 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color6 = new Lightning.Widgets.ColorButton (current_color);
+        var color6 = new Paleta.Widgets.ColorButton (current_color);
 
         var colors = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         colors.pack_start (color1, false, false, 0);
@@ -65,10 +65,10 @@ public class Lightning.Views.ColorPickerView : Gtk.Box {
         recent_colors_stack.pack_start (recent_colors, false, false, 0);
         recent_colors_stack.pack_start (colors, false, false, 0);
 
-        var prueba = new Lightning.Widgets.ColorButton (current_color);
+        var prueba = new Paleta.Widgets.ColorButton (current_color);
 
         color_picker_button.clicked.connect (() => {
-            var mouse_position = new Lightning.Widgets.Picker ();
+            var mouse_position = new Paleta.Widgets.Picker ();
             mouse_position.show_all ();
             
             mouse_position.moved.connect ((t, color) => {

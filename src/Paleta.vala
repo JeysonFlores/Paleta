@@ -1,12 +1,12 @@
 
-namespace Lightning {
+namespace Paleta {
 
-    public Lightning.Services.Settings settings;
+    public Paleta.Services.Settings settings;
     
     public class Application : Granite.Application {
         
         public Application () {
-            Object (application_id: "com.github.jeysonflores.lightning",
+            Object (application_id: "com.github.jeysonflores.paleta",
             flags: ApplicationFlags.FLAGS_NONE);
         }
         
@@ -16,7 +16,7 @@ namespace Lightning {
                 return;
             }
             
-            settings = Lightning.Services.Settings.get_instance ();
+            settings = Paleta.Services.Settings.get_instance ();
             
             var app_window = new MainWindow (this);
             
@@ -40,9 +40,9 @@ namespace Lightning {
             var css_provider = new Gtk.CssProvider ();
 
             if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK)
-                css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style-dark.css");
+                css_provider.load_from_resource ("/com/github/jeysonflores/paleta/style-dark.css");
             else
-                css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
+                css_provider.load_from_resource ("/com/github/jeysonflores/paleta/style.css");
 
             Gtk.StyleContext.add_provider_for_screen (
                 Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
@@ -58,9 +58,9 @@ namespace Lightning {
                 );
 
                 if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK)
-                    css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style-dark.css");
+                    css_provider.load_from_resource ("/com/github/jeysonflores/paleta/style-dark.css");
                 else
-                    css_provider.load_from_resource ("/com/github/jeysonflores/lightning/style.css");
+                    css_provider.load_from_resource ("/com/github/jeysonflores/paleta/style.css");
 
                 Gtk.StyleContext.add_provider_for_screen (
                     Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION

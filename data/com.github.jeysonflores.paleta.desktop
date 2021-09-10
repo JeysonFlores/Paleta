@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Lightning
+Name=Paleta
 Comment=Productiviy-based color picker
 Comment[es]=Selector de color enfocado a la productividad
-Exec=com.github.jeysonflores.lightning
-Icon=com.github.jeysonflores.lightning
+Exec=com.github.jeysonflores.paleta
+Icon=com.github.jeysonflores.paleta
 Keywords=colorpicker;color;picker;selector;pipette;
 Terminal=false
 Type=Application
-Categories=GTK;Utility;Graphics;Development;
+Categories=GTK;Graphics;Utility;

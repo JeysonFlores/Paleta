@@ -1,4 +1,4 @@
-class Lightning.Widgets.ColorButton : Gtk.Button {
+class Paleta.Widgets.ColorButton : Gtk.Button {
 
     public ExtRGBA color;
 

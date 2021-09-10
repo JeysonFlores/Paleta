@@ -20,7 +20,7 @@
 * Inspired by: https://github.com/stuartlangridge/ColourPicker/
 */
 
-namespace Lightning.Widgets {
+namespace Paleta.Widgets {
 
     public class Picker : Granite.Widgets.CompositedWindow {
     

@@ -1,4 +1,4 @@
-project('com.github.jeysonflores.lightning', ['vala', 'c'],
+project('com.github.jeysonflores.paleta', ['vala', 'c'],
     version: '0.1.2',
     license: 'GPL-3.0'
 )
@@ -28,8 +28,8 @@ c_args = [
 ]
 
 executable(
-    'com.github.jeysonflores.lightning',
-    'src/Lightning.vala',
+    'com.github.jeysonflores.paleta',
+    'src/Paleta.vala',
     'src/MainWindow.vala',
     'src/ExtRGBA.vala',
     'src/Widgets/Picker.vala',

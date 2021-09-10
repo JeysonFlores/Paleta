@@ -1,10 +1,10 @@
 
-public class Lightning.Widgets.FormatStack : Gtk.Box {
+public class Paleta.Widgets.FormatStack : Gtk.Box {
 
     private Granite.Widgets.ModeButton navigation;
     private Gtk.Stack stack;
     private Gtk.Button copy_button;
-    public Lightning.ExtRGBA current_color;
+    public Paleta.ExtRGBA current_color;
 
     public FormatStack () {
         Object(

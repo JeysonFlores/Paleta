@@ -1,4 +1,4 @@
-namespace Lightning {
+namespace Paleta {
 
     public struct ExtRGBA : Gdk.RGBA {
                                      

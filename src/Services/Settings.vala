@@ -1,5 +1,5 @@
 
-namespace Lightning.Services {
+namespace Paleta.Services {
 
     public class Settings : Granite.Services.Settings {
     
@@ -20,7 +20,7 @@ namespace Lightning.Services {
         }
 
         private Settings () {
-            base ("com.github.jeysonflores.lightning");
+            base ("com.github.jeysonflores.paleta");
         }
     }
 }

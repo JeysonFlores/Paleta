@@ -1,3 +1,3 @@
-class Lightning.Views.ContrastView {
+class Paleta.Views.ContrastView {
     
 }
