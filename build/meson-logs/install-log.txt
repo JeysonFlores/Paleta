@@ -1,0 +1,21 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+/usr/local/bin/com.github.jeysonflores.lightning
+/usr/local/share/icons/hicolor/32x32/apps/com.github.jeysonflores.lightning.svg
+/usr/local/share/icons/hicolor/48x48/apps/com.github.jeysonflores.lightning.svg
+/usr/local/share/icons/hicolor/64x64/apps/com.github.jeysonflores.lightning.svg
+/usr/local/share/icons/hicolor/128x128/apps/com.github.jeysonflores.lightning.svg
+/usr/local/share/icons/hicolor/symbolic/apps/ionicons-contrast-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/ionicons-eyedrop-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/ionicons-albums-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/feathericons-sliders-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/java-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/ionicons-cube-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/ionicons-color-filter-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/feathericons-hash-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/flutter-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/css-symbolic.svg
+/usr/local/share/icons/hicolor/symbolic/apps/android-symbolic.svg
+/usr/local/share/glib-2.0/schemas/com.github.jeysonflores.lightning.gschema.xml
+/usr/local/share/applications/com.github.jeysonflores.lightning.desktop
+/usr/local/share/metainfo/com.github.jeysonflores.lightning.appdata.xml

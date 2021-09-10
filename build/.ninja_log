@@ -1,0 +1,22 @@
+# ninja log v5
+0	37	1631305661163366459	as-resources.h	300bbe2f3e211c8e
+0	38	1631305661167366600	as-resources.c	9ae56854e84d174d
+38	391	1631305661519378996	com.github.jeysonflores.lightning@exe/meson-generated_.._as-resources.c.o	a05a8ca59c3ca691
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Lightning.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/MainWindow.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/ExtRGBA.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Widgets/Picker.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Widgets/FormatStack.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Widgets/ColorButton.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Services/Settings.c	a938e6eb3e131b19
+1	1360	1631305662339407875	com.github.jeysonflores.lightning@exe/src/Views/ColorPickerView.c	a938e6eb3e131b19
+1360	2075	1631305663203438305	com.github.jeysonflores.lightning@exe/meson-generated_src_ExtRGBA.c.o	db42234ba9987522
+1360	2648	1631305663771458311	com.github.jeysonflores.lightning@exe/meson-generated_src_Lightning.c.o	fb85a1160848fd79
+1360	2832	1631305663959464933	com.github.jeysonflores.lightning@exe/meson-generated_src_MainWindow.c.o	a74dd7286d00ed9e
+2075	3359	1631305664487483532	com.github.jeysonflores.lightning@exe/meson-generated_src_Widgets_Picker.c.o	be18c0dfa9fcbbdb
+2832	4111	1631305665219509317	com.github.jeysonflores.lightning@exe/meson-generated_src_Widgets_ColorButton.c.o	128a2c4848f475e0
+2650	4217	1631305665331513263	com.github.jeysonflores.lightning@exe/meson-generated_src_Widgets_FormatStack.c.o	bd8353122e878cdf
+3360	4766	1631305665891532990	com.github.jeysonflores.lightning@exe/meson-generated_src_Services_Settings.c.o	d8ad0f51fd8dfb8b
+4111	4972	1631305666099540318	com.github.jeysonflores.lightning@exe/meson-generated_src_Views_ColorPickerView.c.o	6dda926a1e891ba7
+4972	5211	1631305666335548632	com.github.jeysonflores.lightning	658fdca5db257bfa
+5211	9928	0	meson-install	9bd7faa9472bf40f
