@@ -74,11 +74,9 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
             mouse_position.moved.connect ((t, color) => {
                 var ext_color = (ExtRGBA) color;
                 //printf("%s", ext_color.to_uppercase_hex_string ());
-                print("Se mueve");
             });                
 
             mouse_position.cancelled.connect (() => {
-                print("Cancelado");
                 mouse_position.close ();
             });
 
@@ -87,7 +85,7 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
             mouse_position.picked.connect ((t, color) => {
                 var ext_active_color = (ExtRGBA) color;
                 //printf("%s", ext_active_color.to_uppercase_hex_string ());
-                print("Pickeado");               
+                color_picked_label.override_background_color(Gtk.StateFlags.NORMAL, ext_active_color);           
                 mouse_position.close ();
             });
         });
