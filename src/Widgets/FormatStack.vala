@@ -4,7 +4,12 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
     private Granite.Widgets.ModeButton navigation;
     private Gtk.Stack stack;
     private Gtk.Button copy_button;
-    public Paleta.ExtRGBA current_color;
+    private Gtk.Label hex_label;
+    private Gtk.Label rgb_label;
+    private Gtk.Label gdk_label;
+    private Gtk.Label java_label;
+    private Gtk.Label android_label;
+    private Gtk.Label flutter_label;
 
     public FormatStack () {
         Object(
@@ -32,12 +37,12 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
 
         stack = new Gtk.Stack ();
 
-        var hex_label = new Gtk.Label ("#3F92AA");
-        var rgb_label = new Gtk.Label ("rgb(211, 32, 128)");
-        var gdk_label = new Gtk.Label ("Gdk.RGBA(211, 32, 128, 1)");
-        var java_label = new Gtk.Label ("new Color(211, 32, 128)");
-        var android_label = new Gtk.Label ("Color.rgb(211, 32, 128)");
-        var flutter_label = new Gtk.Label ("Color(0xffffffff)");
+        hex_label = new Gtk.Label ("#3F92AA");
+        rgb_label = new Gtk.Label ("rgb(211, 32, 128)");
+        gdk_label = new Gtk.Label ("Gdk.RGBA(211, 32, 128, 1)");
+        java_label = new Gtk.Label ("new Color(211, 32, 128)");
+        android_label = new Gtk.Label ("Color.rgb(211, 32, 128)");
+        flutter_label = new Gtk.Label ("Color(0xffffffff)");
 
         hex_label.get_style_context ().add_class ("formatbox-label");
         rgb_label.get_style_context ().add_class ("formatbox-label");
@@ -73,7 +78,7 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
 
     public void on_navigation_changed () {
         if(navigation.selected == 0)
-                stack.visible_child_name = "Hex";
+            stack.visible_child_name = "Hex";
 
         if(navigation.selected == 1)
             stack.visible_child_name = "RGB";
@@ -91,7 +96,12 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
             stack.visible_child_name = "Flutter";
     }
 
-    public void update_color () {
-
+    public void update_color (ExtRGBA new_color) {
+        hex_label.set_label (new_color.to_uppercase_hex_string ());
+        rgb_label.set_label (new_color.to_css_rgb_string ());
+        gdk_label.set_label (new_color.to_gdk_rgba_string ());
+        java_label.set_label (new_color.to_java_rgb_string ());
+        android_label.set_label (new_color.to_android_rgba_string ());
+        flutter_label.set_label (new_color.to_flutter_hex_string ());
     }
 }

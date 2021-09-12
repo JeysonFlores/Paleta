@@ -30,7 +30,7 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
             can_focus = false
         };
 
-        color_picked_label.override_background_color(Gtk.StateFlags.NORMAL, current_color);
+        color_picked_label.override_background_color (Gtk.StateFlags.NORMAL, current_color);
 
         color_picked_label.get_style_context ().add_class ("color-picked");
 
@@ -85,7 +85,8 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
             mouse_position.picked.connect ((t, color) => {
                 var ext_active_color = (ExtRGBA) color;
                 //printf("%s", ext_active_color.to_uppercase_hex_string ());
-                color_picked_label.override_background_color(Gtk.StateFlags.NORMAL, ext_active_color);           
+                format_stack.update_color (ext_active_color);
+                color_picked_label.override_background_color (Gtk.StateFlags.NORMAL, ext_active_color);           
                 mouse_position.close ();
             });
         });
