@@ -19,6 +19,8 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
 
     construct {
 
+        var clipboard = Gtk.Clipboard.get (Gdk.SELECTION_CLIPBOARD);
+
         navigation = new Granite.Widgets.ModeButton ();
         navigation.append_icon ("css-symbolic", Gtk.IconSize.BUTTON);
         navigation.append_icon ("ionicons-color-filter-symbolic", Gtk.IconSize.BUTTON);
@@ -63,6 +65,25 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
             can_focus = false
         };
         copy_button.get_style_context ().add_class ("formatbox-copybutton");
+        copy_button.clicked.connect(() => {
+            if(navigation.selected == 0)
+                clipboard.set_text (hex_label.get_text (), -1);
+
+            if(navigation.selected == 1)
+                clipboard.set_text (rgb_label.get_text (), -1);
+
+            if(navigation.selected == 2)
+                clipboard.set_text (gdk_label.get_text (), -1);
+
+            if(navigation.selected == 3)
+                clipboard.set_text (java_label.get_text (), -1);
+
+            if(navigation.selected == 4)
+                clipboard.set_text (android_label.get_text (), -1);
+
+            if(navigation.selected == 5)
+                clipboard.set_text (flutter_label.get_text (), -1);
+        });
 
         var content_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         content_box.pack_start (stack, false, false, 0);
