@@ -28,7 +28,6 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
         navigation.append_icon ("java-symbolic", Gtk.IconSize.BUTTON);
         navigation.append_icon ("android-symbolic", Gtk.IconSize.BUTTON);
         navigation.append_icon ("flutter-symbolic", Gtk.IconSize.BUTTON);
-        navigation.set_active (0);
         navigation.can_focus = false;
         navigation.get_style_context ().remove_class("linked");
         navigation.get_style_context ().add_class("formatbox-nav");
