@@ -24,6 +24,12 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
 
         current_color = ExtRGBA ();
         current_color.parse ("#edb2f7");
+
+        var current_color2 = ExtRGBA ();
+        current_color2.parse ("#F8E37E");
+
+        var current_color3 = ExtRGBA ();
+        current_color3.parse ("#9383F2");
         //print (current_color.to_flutter_hex_string ());
 
         color_picked_label = new Gtk.Label ("") {
@@ -35,7 +41,7 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
         color_picked_label.get_style_context ().add_class ("color-picked");
 
         var format_stack = new Paleta.Widgets.FormatStack ();
-
+        format_stack.navigation.set_active (settings.color_format_index);
 
         var recent_colors_stack = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         recent_colors_stack.get_style_context ().add_class ("recent-colors");
@@ -45,13 +51,13 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
 
         var color1 = new Paleta.Widgets.ColorButton (current_color);
 
-        var color2 = new Paleta.Widgets.ColorButton (current_color);
+        var color2 = new Paleta.Widgets.ColorButton (current_color2);
 
-        var color3 = new Paleta.Widgets.ColorButton (current_color);
+        var color3 = new Paleta.Widgets.ColorButton (current_color3);
 
-        var color4 = new Paleta.Widgets.ColorButton (current_color);
+        var color4 = new Paleta.Widgets.ColorButton (current_color2);
 
-        var color5 = new Paleta.Widgets.ColorButton (current_color);
+        var color5 = new Paleta.Widgets.ColorButton (current_color3);
 
         var color6 = new Paleta.Widgets.ColorButton (current_color);
 

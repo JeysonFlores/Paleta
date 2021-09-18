@@ -1,7 +1,7 @@
 
 public class Paleta.Widgets.FormatStack : Gtk.Box {
 
-    private Granite.Widgets.ModeButton navigation;
+    public Granite.Widgets.ModeButton navigation;
     private Gtk.Stack stack;
     private Gtk.Button copy_button;
     private Gtk.Label hex_label;
@@ -98,6 +98,9 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
     }
 
     public void on_navigation_changed () {
+
+        settings.color_format_index = navigation.selected;
+
         if(navigation.selected == 0)
             stack.visible_child_name = "Hex";
 

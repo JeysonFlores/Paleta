@@ -33,9 +33,9 @@ public class Paleta.MainWindow: Hdy.Window {
         //icon_mode.append_icon ("feathericons-hash-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.append_icon ("ionicons-contrast-symbolic", Gtk.IconSize.BUTTON);
         //icon_mode.append_icon ("ionicons-color-filter-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("ionicons-albums-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("ionicons-albums-symbolic", Gtk.IconSize.BUTTON);
         //icon_mode.append_icon ("ionicons-cube-symbolic", Gtk.IconSize.BUTTON);
-        icon_mode.append_icon ("ionicons-options-symbolic", Gtk.IconSize.BUTTON);
+        //icon_mode.append_icon ("ionicons-options-symbolic", Gtk.IconSize.BUTTON);
         //icon_mode.append_icon ("java-symbolic", Gtk.IconSize.BUTTON);
         icon_mode.set_active (0);
         icon_mode.can_focus = false;
@@ -91,8 +91,8 @@ public class Paleta.MainWindow: Hdy.Window {
 
         deck.add (color_picker_view);
         deck.add (label2);
-        deck.add (label3);
-        deck.add (label4);
+        //deck.add (label3);
+       // deck.add (label4);
         deck.visible_child = color_picker_view;
 
         deck.notify["visible-child"].connect (() => {
