@@ -10,10 +10,12 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
     private Gtk.Label java_label;
     private Gtk.Label android_label;
     private Gtk.Label flutter_label;
+    public ExtRGBA color {get; construct;}
 
-    public FormatStack () {
+    public FormatStack (ExtRGBA color) {
         Object(
-            orientation: Gtk.Orientation.VERTICAL
+            orientation: Gtk.Orientation.VERTICAL,
+            color: color
         );
     }
 
@@ -29,6 +31,7 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
         navigation.append_icon ("android-symbolic", Gtk.IconSize.BUTTON);
         navigation.append_icon ("flutter-symbolic", Gtk.IconSize.BUTTON);
         navigation.can_focus = false;
+        navigation.set_active (0);
         navigation.get_style_context ().remove_class("linked");
         navigation.get_style_context ().add_class("formatbox-nav");
 
@@ -38,12 +41,12 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
 
         stack = new Gtk.Stack ();
 
-        hex_label = new Gtk.Label ("#3F92AA");
-        rgb_label = new Gtk.Label ("rgb(211, 32, 128)");
-        gdk_label = new Gtk.Label ("Gdk.RGBA(211, 32, 128, 1)");
-        java_label = new Gtk.Label ("new Color(211, 32, 128)");
-        android_label = new Gtk.Label ("Color.rgb(211, 32, 128)");
-        flutter_label = new Gtk.Label ("Color(0xffffffff)");
+        hex_label = new Gtk.Label (color.to_uppercase_hex_string ());
+        rgb_label = new Gtk.Label (color.to_css_rgb_string ());
+        gdk_label = new Gtk.Label (color.to_gdk_rgba_string ());
+        java_label = new Gtk.Label (color.to_java_rgb_string ());
+        android_label = new Gtk.Label (color.to_android_rgba_string ());
+        flutter_label = new Gtk.Label (color.to_flutter_hex_string ());
 
         hex_label.get_style_context ().add_class ("formatbox-label");
         rgb_label.get_style_context ().add_class ("formatbox-label");
@@ -98,8 +101,6 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
 
     public void on_navigation_changed () {
 
-        settings.color_format_index = navigation.selected;
-
         if(navigation.selected == 0)
             stack.visible_child_name = "Hex";
 
@@ -120,11 +121,11 @@ public class Paleta.Widgets.FormatStack : Gtk.Box {
     }
 
     public void update_color (ExtRGBA new_color) {
-        hex_label.set_label (new_color.to_uppercase_hex_string ());
-        rgb_label.set_label (new_color.to_css_rgb_string ());
-        gdk_label.set_label (new_color.to_gdk_rgba_string ());
-        java_label.set_label (new_color.to_java_rgb_string ());
-        android_label.set_label (new_color.to_android_rgba_string ());
-        flutter_label.set_label (new_color.to_flutter_hex_string ());
+        hex_label.set_label (color.to_uppercase_hex_string ());
+        rgb_label.set_label (color.to_css_rgb_string ());
+        gdk_label.set_label (color.to_gdk_rgba_string ());
+        java_label.set_label (color.to_java_rgb_string ());
+        android_label.set_label (color.to_android_rgba_string ());
+        flutter_label.set_label (color.to_flutter_hex_string ());
     }
 }

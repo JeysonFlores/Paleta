@@ -40,8 +40,7 @@ public class Paleta.Views.ColorPickerView : Gtk.Box {
 
         color_picked_label.get_style_context ().add_class ("color-picked");
 
-        var format_stack = new Paleta.Widgets.FormatStack ();
-        format_stack.navigation.set_active (settings.color_format_index);
+        var format_stack = new Paleta.Widgets.FormatStack (current_color);
 
         var recent_colors_stack = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         recent_colors_stack.get_style_context ().add_class ("recent-colors");
